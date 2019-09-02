@@ -1,4 +1,4 @@
-# pytravis
+# pytrav
 
 A proof of concept .travis.yml script
 

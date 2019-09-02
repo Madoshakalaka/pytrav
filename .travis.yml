@@ -1,15 +1,9 @@
 language: python
 dist: xenial
 
-install:
-  - pipenv install --dev
-  # fool proof
-  - pipenv install --dev -e .
-  # fool proof
-  - pipenv install --dev tox-travis
-
-# only intended for linux jobs. Mac and Windows will overwrite script
-script: 'python -m pytest --cov=pytravis'
+# only intended for Linux and Mac jobs. Windows will overwrite install and script
+install: python3 -m pip install tox
+script: python3 -m tox
 after_success: 'codecov'
 
 stages:
@@ -28,9 +22,6 @@ jobs:
     osx_image: xcode11
     # language: python will error
     language: shell
-    # python3/python will lead to python 3.7 and python 2.7
-    before_install: python3 -m pip install pipenv
-    script: pipenv run tox
 
   # osx python 3.6
   - os: osx
@@ -44,9 +35,7 @@ jobs:
       - brew unlink python
       - brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
       - brew switch python 3.6.5_1
-      - python3 -m pip install pipenv
     # end switch
-    script: pipenv run pytest --cov=pytravis
 
   # windows python 3.7
   - os: windows
@@ -56,9 +45,9 @@ jobs:
     before_install:
       - choco install python --version 3.7.4
       - python -m pip install --upgrade pip
-      - python -m pip install pipenv
-    install: pipenv install --dev
-    script: pipenv run pytest --cov=pytravis
+    install: python -m pip install tox
+    # On Windows, python3 does not exist
+    script: python -m tox
     env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
 
   # windows python 3.6
@@ -68,13 +57,13 @@ jobs:
       - choco install python --version 3.6.8
       - python -m pip install --upgrade pip
       - python -m pip install pipenv
-    install: pipenv install --dev
-    script: pipenv run pytest --cov=pytravis
+    install: python -m pip install tox
+    script: python -m tox
     env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
 
   - stage: deploy
-    install: 'pipenv install --dev pipenv-setup'
-    script: 'pipenv-setup sync'
+    install: ''
+    script: ''
     after_success: ''
     deploy:
       provider: pypi

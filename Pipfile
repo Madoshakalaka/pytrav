@@ -5,7 +5,12 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
-pytravis = {editable = true,path = "."}
+twine = "*"
+pytrav = {editable = true,path = "."}
 tox-travis = "*"
 
 [packages]
+
+[scripts]
+build = 'python setup.py sdist'
+release = 'python -m twine upload dist/*'

@@ -36,7 +36,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name="pytravis",  # Required
+    name="pytrav",  # Required
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
     #
@@ -72,7 +72,7 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url="https://github.com/Madoshakalaka/pytravis",  # Optional
+    url="https://github.com/Madoshakalaka/pytrav",  # Optional
     # This should be your name or the name of the organization which owns the
     # project.
     author="Matt Yan",  # Optional
@@ -177,9 +177,9 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        "Bug Reports": "https://github.com/Madoshakalaka/pytravis/issues",
-        "Funding": "https://github.com/Madoshakalaka/pytravis",
-        "Say Thanks!": "https://github.com/Madoshakalaka/pytravis",
-        "Source": "https://github.com/Madoshakalaka/pytravis",
+        "Bug Reports": "https://github.com/Madoshakalaka/pytrav/issues",
+        "Funding": "https://github.com/Madoshakalaka/pytrav",
+        "Say Thanks!": "https://github.com/Madoshakalaka/pytrav",
+        "Source": "https://github.com/Madoshakalaka/pytrav",
     },
 )
