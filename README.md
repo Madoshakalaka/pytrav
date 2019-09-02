@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/Madoshakalaka/pytrav/branch/master/graph/badge.svg)](https://codecov.io/gh/Madoshakalaka/pytrav)
 [![Build Status](https://travis-ci.org/Madoshakalaka/pytrav.svg)](https://travis-ci.org/Madoshakalaka/pytrav)
 
-![beatiful-pictual](./very-beautiful.PNG)
+![beautiful-picture](./very-beautiful.PNG)
 
 Use travis to the most.
 
