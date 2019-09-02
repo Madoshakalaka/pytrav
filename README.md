@@ -21,13 +21,13 @@ essential to-dos:
     
 - if not that cool
     - copy three files: `tox.ini` `setup.py` `.travis.yml`
+    - push code to github
     - changes to make:
         - in `tox.ini` --cov=<your_package_folder_name>
-        - in `setup.py` change description; find and replace all `pytrav` to your package name
-    - push code to github
+        - in `setup.py` change package description; find and replace all `pytrav` to your package name
+        - in `.travis.yml` change pypi `user` key to your pypi username 
+        - `$ travis encrypt <your-pypi-password>` copy the result and overwrite the `secure` key in `.travis.yml`        
     - go to travis ci and add repo
     - go to codecov and add repo
     - copy codecov environment variable and set it on travis ci
-    - change pypi `user` key to your pypi username in `.travis.yml`
-    - `$ travis encrypt <your-pypi-password>` copy the result and overwrite the `secure` key in `.travis.yml`
-    - figure out a bunch of other problems yourself
+    - figure out a bunch of other problems yourself. (or submit an issue)
