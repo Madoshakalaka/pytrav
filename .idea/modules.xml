@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pytravis.iml" filepath="$PROJECT_DIR$/.idea/pytravis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pytrav.iml" filepath="$PROJECT_DIR$/.idea/pytrav.iml" />
     </modules>
   </component>
 </project>
