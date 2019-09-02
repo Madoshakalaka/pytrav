@@ -4,7 +4,6 @@ dist: xenial
 # only intended for Linux and Mac jobs. Windows will overwrite install and script
 install: python3 -m pip install tox
 script: python3 -m tox
-after_success: 'codecov'
 
 stages:
 - test
