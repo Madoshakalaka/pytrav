@@ -47,7 +47,7 @@ jobs:
         update: true
     before_install:
       - brew unlink python
-      - brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/ec545d45d4512ace3570782283df4ecda6bb0044/Formula/python3.rb
+      - brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/ec545d45d4512ace3570782283df4ecda6bb0044/Formula/python.rb
       - brew switch python 3.5.2_3
     # end switch
 
