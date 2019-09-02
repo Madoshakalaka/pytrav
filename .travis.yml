@@ -61,6 +61,17 @@ jobs:
     script: python -m tox
     env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
 
+  # windows python 3.5
+  - os: windows
+    language: shell
+    before_install:
+      - choco install python --version 3.5.4
+      - python -m pip install --upgrade pip
+      - python -m pip install pipenv
+    install: python -m pip install tox
+    script: python -m tox
+    env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
+
   - stage: deploy
     install: ''
     script: ''
@@ -69,6 +80,6 @@ jobs:
       provider: pypi
       user: Madoshakalaka
       password:
-        secure: KQizTecP7oH5S1zHk2dkFGqJHilEX43yitgGR91G1vmq4BBNRShu8Oq+uRpOX3Plz/oFyelnYhF987qq3xyg1E327ozX9EoQ+iDE3AKyBIBONUCAoe8pcG4XIwFsjdmOkw9ODeKq8VU8t+KSAvIPIEd27G6N6WQ+DVOcoyIn0uJsCB0jX32wqaCQO8yTf1A/qWVzYnt8aqBXToDiC0XprrodMgvrTExyhBLW5Y7zuiNgfGb6HtRHAa9nvoO3/V8Jn2yXlv/uzE0rsVll+w0mxz/fYRkjZIfk7ju8L4b49+gu/onG827pOwQkfswUwb3QsXRR4PugmTyNGVuX5svxT22K+kYZaJn646X/nkljYJMhYNjbtuSlZcfZyg8QEJ1jNNtWW48Gt5yOTc1HPdggOig9hygj+ctc/TeIEKzaCMx9S184+Sz8LzNSiHTsmde0SxgIcS/QM8+5xdJ2yr917qhqh8iiiBeD58bISKGk+cEQNqha1aIVU4G9JhQsknaKUDUnQ7sSiO3dUGOJqGpuDQzJr5O4TEC2Rf05VzLSpkfTTjAhIVTH4gE3EcEbGQlaa3VHZvftdFmAHEu9nueC9dolSFEwqu/yf+bv3LGBskEbDUQir21RbX3axuS9NvaZX33vNlyLFmI41Or2iaOopgJeHlhlxLESTX5EhjNmpf0=
+        secure: E1iJS0oOb3EKIjdeteg9JuLoEtNeSiW6ZDwH8sM7aHpUxwFKN3PACIp4+S1sb8hsOuA0OUvy2JUHnRq8ybvmEI+8hu9dqmm/jyS2g+3Q026gPFAGEZN6J19NPMn8e7+QnpN03Dc85hEg6bbpFuzwwX27l6NrcWloRQuPZ6aG0w3HAQS4jjhpKgylbqAKbd+G+HKVahCITepkXXCdKt9dbHNCPzHkMNDtHCSdP+3LfWdQGhHBEuahTFMYn3J4NOil6TB3hR4V5DNt+qq/NIVmpVxuUihN8defe314XI7LVGLUSR9bkNt6XA4vw3HuycSN/UX2RYeBGkgtmj5hWps/4ElRp+PQy2y+osrtzuOibK+UbGICpRJQI9q/uZehCyEIxqHogVhe9SFMNFCwR87L9APRgXwJMdrKYx3oLbPEQcAdHQ5s027Ok6H0+ZBIoMQtLu1nLdTzSiGc0I/BLnH/hPBJVhuCM8fm4lxgonGHb4rhapmdwzbOmOVgtptnTofXaoLAlqTg7TcjCADU9SBjzGlTgY3EHYqTYJ3wy+mCv0MgIBDlpw1XiLM+auKnYhDvwszBZ0RDuZJ6pCi4vY57Jw/e7Q2UZWzkLpRLqJ+Dbp+EZayEWiVtEFKWlAAMxNPRErFmBpxbyY+vFjI4WM63t/tpqaCPk7E7fAUDEKaY0HM=
       on:
         tags: true
