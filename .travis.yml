@@ -7,7 +7,7 @@ script: python3 -m tox
 
 stages:
 - test
-- deploy
+- "PYPI release"
 jobs:
   include:
   # linux
@@ -90,7 +90,7 @@ jobs:
     script: python -m tox
     env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
 
-  - stage: deploy
+  - stage: "PYPI release"
     install: ''
     script: ''
     after_success: ''

@@ -13,6 +13,3 @@ Use travis to the most.
 - pytest
 - codecov
 - automatic pypi release
-
-
-
