@@ -38,7 +38,7 @@ jobs:
     # end switch
 
   # osx python 3.5
-  - name: "Python: 3.5.6"
+  - name: "Python: 3.5.7"
     os: osx
     osx_image: xcode11
     language: shell
@@ -47,9 +47,8 @@ jobs:
       homebrew:
         update: true
     before_install:
-      - pyenv install -l
-      - CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv install 3.5.6
-      - pyenv global 3.5.6
+      - pyenv install 3.5.7
+      - pyenv global 3.5.7
     # end switch
 
   # windows python 3.7
