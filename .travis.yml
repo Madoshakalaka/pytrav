@@ -47,7 +47,9 @@ jobs:
       homebrew:
         update: true
     before_install:
-      - CFLAGS=-I/usr/include/openssl LDFLAGS=-L/usr/lib pyenv install 3.5.2
+      - brew uninstall openssl
+      - brew install openssl
+      - CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv install 3.5.2
       - pyenv global 3.5.2
     # end switch
 
